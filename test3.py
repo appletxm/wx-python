@@ -1,7 +1,6 @@
 import wx
 from test2 import TestFrame
 
-
 class MyWin(wx.Frame):
     def __init__(self, parent, title):
         super(MyWin, self).__init__(parent, title=title, size=(800, 450))
