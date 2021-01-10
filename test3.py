@@ -7,11 +7,17 @@ class MyWin(wx.Frame):
         panel = wx.Panel(self)
         vbox = wx.BoxSizer(wx.VERTICAL)
 
-        self.btn = wx.Button(panel, -1, "click Me")
+        self.btn = wx.Button(panel, -1, "click Me", size=(100, 100))
         vbox.Add(self.btn, 0, wx.ALIGN_CENTER)
+        # vbox.Add(self.btn, 0, wx.EXPAND)
+
+        # vbox2 = wx.BoxSizer(wx.HORIZONTAL)
+        # vbox2.Add(self.btn, 0, wx.EXPAND)
+        # vbox.Add(vbox2, 0, wx.EXPAND)
+
         self.btn.Bind(wx.EVT_BUTTON, self.OnClicked)
 
-        self.tbtn = wx.ToggleButton(panel, -1, "click to on")
+        self.tbtn = wx.ToggleButton(panel, -1, "click to on", size=(100, 100))
         vbox.Add(self.tbtn, 0, wx.EXPAND)
         self.tbtn.Bind(wx.EVT_TOGGLEBUTTON, self.OnToggle)
 
